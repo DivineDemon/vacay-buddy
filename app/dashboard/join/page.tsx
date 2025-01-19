@@ -10,9 +10,11 @@ import {useRouter, useSearchParams} from "next/navigation";
 import {Suspense, useEffect} from "react";
 import joinNow from "@/public/join-now.svg";
 
-const Join = ({ token }: { token: string | null }) => {
-  const {isLoaded, isSignedIn} = useUser();
+function GetJoin() {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const token = searchParams.get("token");
+  const {isLoaded, isSignedIn} = useUser();
 
   const grantAccessByToken = useMutation(api.token.grantAccessByToken);
   const {toast} = useToast();
@@ -70,14 +72,8 @@ const Join = ({ token }: { token: string | null }) => {
   );
 };
 
-const Se = () => {
-  const searchParams = useSearchParams();
-
-  return (
-    <Suspense>
-      <Join token={searchParams.get("token")} />
-    </Suspense>
-  );
+export default function Join() {
+  <Suspense>
+    <GetJoin />
+  </Suspense>
 }
-
-export default Se;
