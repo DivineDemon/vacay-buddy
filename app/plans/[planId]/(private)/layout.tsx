@@ -8,17 +8,16 @@ import {api} from "@/convex/_generated/api";
 import {Id} from "@/convex/_generated/dataModel";
 import {Analytics} from "@vercel/analytics/react";
 import {fetchQuery} from "convex/nextjs";
-import {Metadata, ResolvingMetadata} from "next";
+import {Metadata} from "next";
+import { type ReactNode } from "react";
 
-export async function generateMetadata(
-  {
-    params,
-  }: {
-    params: {planId: string};
-  },
-  parent: ResolvingMetadata
-): Promise<Metadata> {
-  const id = params.planId;
+interface PageProps {
+  children: ReactNode;
+  params: Promise<{ planId: string }>;
+}
+
+export async function generateMetadata(props: PageProps): Promise<Metadata> {
+  const { planId: id } = await props.params;
   const token = await getAuthToken();
 
   try {
@@ -37,19 +36,15 @@ export async function generateMetadata(
   }
 }
 
-export default function RootLayout({
-  children,
-  params,
-}: {
-  children: React.ReactNode;
-  params: {planId: string};
-}) {
+export default async function RootLayout(props: PageProps) {
+  const { planId } = await props.params;
+
   return (
     <>
       <Header isPublic={true} />
       <main className="flex min-h-[calc(100svh-4rem)] flex-col items-center dark:bg-background">
-        <PlanLayoutContent planId={params.planId} isPublic={false}>
-          {children}
+        <PlanLayoutContent planId={planId} isPublic={false}>
+          {props.children}
         </PlanLayoutContent>
         <Progress />
         <Analytics />
