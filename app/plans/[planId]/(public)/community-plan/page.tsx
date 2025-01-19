@@ -1,5 +1,11 @@
 import CommunityPlan from "@/components/plan/CommunityPlan";
 
-export default async function PlanPage({params}: {params: {planId: string}}) {
-  return <CommunityPlan planId={params.planId} />;
+interface PageProps {
+  params: Promise<{ planId: string }>;
+}
+
+export default async function PlanPage(props: PageProps) {
+  const { planId } = await props.params;
+
+  return <CommunityPlan planId={planId} />;
 }
