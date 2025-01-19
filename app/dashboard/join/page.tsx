@@ -10,16 +10,6 @@ import {useRouter, useSearchParams} from "next/navigation";
 import {Suspense, useEffect} from "react";
 import joinNow from "@/public/join-now.svg";
 
-function Se() {
-  const searchParams = useSearchParams();
-
-  return (
-    <Suspense>
-      <Join token={searchParams.get("token")} />
-    </Suspense>
-  )
-}
-
 const Join = ({ token }: { token: string | null }) => {
   const {isLoaded, isSignedIn} = useUser();
   const router = useRouter();
@@ -80,4 +70,14 @@ const Join = ({ token }: { token: string | null }) => {
   );
 };
 
-export default Join;
+const Se = () => {
+  const searchParams = useSearchParams();
+
+  return (
+    <Suspense>
+      <Join token={searchParams.get("token")} />
+    </Suspense>
+  );
+}
+
+export default Se;
