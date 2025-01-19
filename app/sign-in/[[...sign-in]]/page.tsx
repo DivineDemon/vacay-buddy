@@ -29,7 +29,7 @@ const Page = () => {
 
       if (signInAttempt.status === "complete") {
         await setActive({ session: signInAttempt.createdSessionId });
-        router.push("/");
+        router.push("/dashboard");
       } else {
         console.error(JSON.stringify(signInAttempt, null, 2));
       }

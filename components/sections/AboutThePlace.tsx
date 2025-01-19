@@ -1,4 +1,5 @@
 "use client";
+
 import SectionWrapper from "@/components/sections/SectionWrapper";
 
 import {Skeleton} from "@/components/ui/skeleton";

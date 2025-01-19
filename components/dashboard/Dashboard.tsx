@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
@@ -6,19 +7,14 @@ import Image from "next/image";
 import DrawerDialog from "@/components/shared/DrawerWithDialog";
 
 
-// Define the props interface for TruncatedText
 interface TruncatedTextProps {
-  text: string; // The text to display
-  limit: number; // The word limit before truncating
+  text: string;
+  limit: number;
 }
 
 const TruncatedText: React.FC<TruncatedTextProps> = ({ text, limit }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-
-  // Split text into words
   const words = text.split(" ");
-
-  // Determine what to display
   const displayedText = isExpanded
     ? text
     : words.slice(0, limit).join(" ") + (words.length > limit ? "..." : "");
@@ -37,7 +33,6 @@ const TruncatedText: React.FC<TruncatedTextProps> = ({ text, limit }) => {
   );
 };
 
-// Static Data to Simulate API Response
 const staticPlans = Array.from({ length: 50 }, (_, index) => ({
   _id: `plan-${index + 1}`,
   nameoftheplace: `Cappadocia ${index + 1}`,
@@ -77,7 +72,6 @@ export default function Dashboard() {
   const renderPagination = () => {
     const paginationItems = [];
 
-    // Display << button for the first page (only if currentPage > 1)
     if (currentPage > 0) {
       paginationItems.push(
         <button
@@ -90,7 +84,6 @@ export default function Dashboard() {
       );
     }
 
-    // Display < button for the previous page (only if currentPage > 1)
     if (currentPage > 0) {
       paginationItems.push(
         <button

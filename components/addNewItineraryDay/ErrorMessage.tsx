@@ -1,3 +1,5 @@
+"use client";
+
 import {FieldError} from "react-hook-form";
 
 const ErrorMessage = ({error, isTouched}: {error: FieldError | undefined; isTouched: boolean}) => {

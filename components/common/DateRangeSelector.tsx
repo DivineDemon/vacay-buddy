@@ -1,10 +1,11 @@
+"use client";
+
 import {Button} from "@/components/ui/button";
 import {Calendar} from "@/components/ui/calendar";
 import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover";
 import {cn, getFormattedDateRange} from "@/lib/utils";
-import {format, formatDate} from "date-fns";
 import {CalendarIcon} from "lucide-react";
-import {Dispatch, SetStateAction, useState} from "react";
+import {useState} from "react";
 import {DateRange} from "react-day-picker";
 
 type DateRangeSelectorProps = {

@@ -1,5 +1,6 @@
+"use client";
+
 import {useConvexAuth} from "convex/react";
-import {MapPinIcon} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 

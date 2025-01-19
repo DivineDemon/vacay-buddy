@@ -1,17 +1,27 @@
+"use client";
+
 // import { features } from "@/lib/constants";
 // import { CheckCircle2 } from "lucide-react";
 import Image from "next/image";
 
 const Pricing = () => {
   return (
-    <section id="pricing" className="w-full flex flex-col gap-5 justify-center items-center py-[100px]">
+    <section
+      id="pricing"
+      className="w-full flex flex-col gap-5 justify-center items-center py-[100px]"
+    >
       <div className="container">
         <div className="flex flex-col gap-2 mb-[100px]">
-          <h2 className="text-[#6D5FFD] text-lg font-bold tracking-wide uppercase text-center">Pricing</h2>
+          <h2 className="text-[#6D5FFD] text-lg font-bold tracking-wide uppercase text-center">
+            Pricing
+          </h2>
           <h3 className="text-foreground text-center md:text-5xl text-xl my-3 font-bold ">
             Simple, transparent pricing
           </h3>
-          <p className="text-center text-gray-500 max-w-[600px] mx-auto mt-1">Lorem ipsum dolor sit amet consectetur adipiscing elit dolor posuere vel venenatis eu sit massa volutpat.</p>
+          <p className="text-center text-gray-500 max-w-[600px] mx-auto mt-1">
+            Lorem ipsum dolor sit amet consectetur adipiscing elit dolor posuere
+            vel venenatis eu sit massa volutpat.
+          </p>
         </div>
         <div className="flex gap-5 flex-col md:flex-row">
           <article
@@ -19,117 +29,255 @@ const Pricing = () => {
                   rounded-3xl p-8 shadow-xl shadow-gray-200 dark:shadow-none"
           >
             <div className="flex items-center gap-4 mb-3">
-              <Image src='/free-plan.svg' alt="plan" width={60} height={100} quality={100} priority />
+              <Image
+                src="/free-plan.svg"
+                alt="plan"
+                width={60}
+                height={100}
+                quality={100}
+                priority
+              />
               <div className="flex flex-col">
                 <div className="text-gray-400">Free Plan</div>
-                <h3 id="tier-standard" className="text-black text-2xl font-extrabold leading-8">
+                <h3
+                  id="tier-standard"
+                  className="text-black text-2xl font-extrabold leading-8"
+                >
                   0 Credit
                 </h3>
               </div>
             </div>
-            <p className="text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, fugiat. Suscipit, quae facere.</p>
+            <p className="text-gray-400">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto,
+              fugiat. Suscipit, quae facere.
+            </p>
             <span className="text-5xl font-bold my-4 tracking-tight text-black">
               $00
             </span>
             <div className="flex flex-col">
-              <ul role="list" className=" space-y-3 text-sm leading-6 text-foreground">
+              <ul
+                role="list"
+                className=" space-y-3 text-sm leading-6 text-foreground"
+              >
                 <h4 className="text-sm">What's Included</h4>
                 <li className="flex gap-x-3 text-base">
-                  <Image src='/paid-check.svg' width={20} height={100} quality={100} alt="check" priority />
+                  <Image
+                    src="/paid-check.svg"
+                    width={20}
+                    height={100}
+                    quality={100}
+                    alt="check"
+                    priority
+                  />
                   All analytics features
                 </li>
                 <li className="flex gap-x-3 text-base">
-                  <Image src='/paid-check.svg' width={20} height={100} quality={100} alt="check" priority />
+                  <Image
+                    src="/paid-check.svg"
+                    width={20}
+                    height={100}
+                    quality={100}
+                    alt="check"
+                    priority
+                  />
                   Up to 250,000 tracked visits
                 </li>
                 <li className="flex gap-x-3 text-base">
-                  <Image src='/paid-check.svg' width={20} height={100} quality={100} alt="check" priority />
+                  <Image
+                    src="/paid-check.svg"
+                    width={20}
+                    height={100}
+                    quality={100}
+                    alt="check"
+                    priority
+                  />
                   Normal support
                 </li>
                 <li className="flex gap-x-3 text-base">
-                  <Image src='/paid-check.svg' width={20} height={100} quality={100} alt="check" priority />
+                  <Image
+                    src="/paid-check.svg"
+                    width={20}
+                    height={100}
+                    quality={100}
+                    alt="check"
+                    priority
+                  />
                   Up to 3 team members
                 </li>
               </ul>
             </div>
-            <button className="rounded-full py-5 hover:bg-[#111] transition-all text-white my-6 w-full bg-[#6D5FFD]">Get Started</button>
+            <button className="rounded-full py-5 hover:bg-[#111] transition-all text-white my-6 w-full bg-[#6D5FFD]">
+              Get Started
+            </button>
           </article>
           <article
             className="flex flex-col justify-between flex-1 xl:size-4/12 md:size-10/12 size-full bg-[#6D5FFD]
-               rounded-3xl p-8 shadow-xl shadow-gray-400 dark:shadow-none lg:-translate-y-10">
+               rounded-3xl p-8 shadow-xl shadow-gray-400 dark:shadow-none lg:-translate-y-10"
+          >
             <div className="flex items-center gap-4 mb-3">
-              <Image src='/popular-plan.svg' alt="plan" width={60} height={100} quality={100} priority />
+              <Image
+                src="/popular-plan.svg"
+                alt="plan"
+                width={60}
+                height={100}
+                quality={100}
+                priority
+              />
               <div className="flex flex-col">
                 <div className="text-gray-200">Paid Plan</div>
-                <h3 id="tier-standard" className="text-white text-2xl font-extrabold leading-8">
+                <h3
+                  id="tier-standard"
+                  className="text-white text-2xl font-extrabold leading-8"
+                >
                   05 Credits
                 </h3>
               </div>
             </div>
-            <p className="text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, fugiat. Suscipit, quae facere.</p>
+            <p className="text-gray-300">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto,
+              fugiat. Suscipit, quae facere.
+            </p>
             <span className="text-5xl font-bold my-4 tracking-tight text-white">
               $89
             </span>
             <div className="flex flex-col">
-              <ul role="list" className=" space-y-3 text-sm leading-6 text-gray-300">
+              <ul
+                role="list"
+                className=" space-y-3 text-sm leading-6 text-gray-300"
+              >
                 <h4 className="text-sm text-white">What's Included</h4>
                 <li className="flex gap-x-3 text-base">
-                  <Image src='/popular-check.svg' width={20} height={100} quality={100} alt="check" priority />
+                  <Image
+                    src="/popular-check.svg"
+                    width={20}
+                    height={100}
+                    quality={100}
+                    alt="check"
+                    priority
+                  />
                   All analytics features
                 </li>
                 <li className="flex gap-x-3 text-base">
-                  <Image src='/popular-check.svg' width={20} height={100} quality={100} alt="check" priority />
+                  <Image
+                    src="/popular-check.svg"
+                    width={20}
+                    height={100}
+                    quality={100}
+                    alt="check"
+                    priority
+                  />
                   Up to 1,000,000 tracked visits
                 </li>
                 <li className="flex gap-x-3 text-base">
-                  <Image src='/popular-check.svg' width={20} height={100} quality={100} alt="check" priority />
+                  <Image
+                    src="/popular-check.svg"
+                    width={20}
+                    height={100}
+                    quality={100}
+                    alt="check"
+                    priority
+                  />
                   Premium support
                 </li>
                 <li className="flex gap-x-3 text-base">
-                  <Image src='/popular-check.svg' width={20} height={100} quality={100} alt="check" priority />
+                  <Image
+                    src="/popular-check.svg"
+                    width={20}
+                    height={100}
+                    quality={100}
+                    alt="check"
+                    priority
+                  />
                   Up to 10 team members
                 </li>
               </ul>
             </div>
-            <button className="rounded-full py-5 font-bold my-6 w-full bg-white hover:bg-[#111] transition-all hover:text-white text-[#6D5FFD]">Get Started</button>
+            <button className="rounded-full py-5 font-bold my-6 w-full bg-white hover:bg-[#111] transition-all hover:text-white text-[#6D5FFD]">
+              Get Started
+            </button>
           </article>
-          <article
-            className="flex flex-col justify-between flex-1 xl:size-4/12 md:size-10/12 size-full rounded-3xl p-8 shadow-xl shadow-gray-200 dark:shadow-none">
+          <article className="flex flex-col justify-between flex-1 xl:size-4/12 md:size-10/12 size-full rounded-3xl p-8 shadow-xl shadow-gray-200 dark:shadow-none">
             <div className="flex items-center gap-4 mb-3">
-              <Image src='/paid-plan.svg' alt="plan" width={60} height={100} quality={100} priority />
+              <Image
+                src="/paid-plan.svg"
+                alt="plan"
+                width={60}
+                height={100}
+                quality={100}
+                priority
+              />
               <div className="flex flex-col">
                 <div className="text-gray-400">Paid Plan</div>
-                <h3 id="tier-standard" className="text-black text-2xl font-extrabold leading-8">
+                <h3
+                  id="tier-standard"
+                  className="text-black text-2xl font-extrabold leading-8"
+                >
                   10 Credits
                 </h3>
               </div>
             </div>
-            <p className="text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, fugiat. Suscipit, quae facere.</p>
+            <p className="text-gray-400">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto,
+              fugiat. Suscipit, quae facere.
+            </p>
             <span className="text-5xl font-bold my-4 tracking-tight text-black">
               $129
             </span>
             <div className="flex flex-col">
-              <ul role="list" className=" space-y-3 text-sm leading-6 text-foreground">
+              <ul
+                role="list"
+                className=" space-y-3 text-sm leading-6 text-foreground"
+              >
                 <h4 className="text-sm">What's Included</h4>
                 <li className="flex gap-x-3 text-base">
-                  <Image src='/popular-check.svg' width={20} height={100} quality={100} alt="check" priority />
+                  <Image
+                    src="/popular-check.svg"
+                    width={20}
+                    height={100}
+                    quality={100}
+                    alt="check"
+                    priority
+                  />
                   All analytics features
                 </li>
                 <li className="flex gap-x-3 text-base">
-                  <Image src='/popular-check.svg' width={20} height={100} quality={100} alt="check" priority />
+                  <Image
+                    src="/popular-check.svg"
+                    width={20}
+                    height={100}
+                    quality={100}
+                    alt="check"
+                    priority
+                  />
                   Up to 5,000,000 tracked visits
                 </li>
                 <li className="flex gap-x-3 text-base">
-                  <Image src='/popular-check.svg' width={20} height={100} quality={100} alt="check" priority />
+                  <Image
+                    src="/popular-check.svg"
+                    width={20}
+                    height={100}
+                    quality={100}
+                    alt="check"
+                    priority
+                  />
                   Dedicated support
                 </li>
                 <li className="flex gap-x-3 text-base">
-                  <Image src='/popular-check.svg' width={20} height={100} quality={100} alt="check" priority />
+                  <Image
+                    src="/popular-check.svg"
+                    width={20}
+                    height={100}
+                    quality={100}
+                    alt="check"
+                    priority
+                  />
                   Up to 50 team members
                 </li>
               </ul>
             </div>
-            <button className="rounded-full py-5 hover:bg-[#111] transition-all text-white my-6 w-full bg-[#6D5FFD]">Get Started</button>
+            <button className="rounded-full py-5 hover:bg-[#111] transition-all text-white my-6 w-full bg-[#6D5FFD]">
+              Get Started
+            </button>
           </article>
         </div>
       </div>

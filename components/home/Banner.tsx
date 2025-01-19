@@ -1,3 +1,5 @@
+"use client";
+
 import GeneratePlanButton from "@/components/GeneratePlanButton";
 import { Lightbulb } from "lucide-react";
 import TravelHero from "@/components/home/TravelHero";

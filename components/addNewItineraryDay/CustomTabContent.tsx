@@ -1,11 +1,11 @@
+"use client";
+
 import ErrorMessage from "@/components/addNewItineraryDay/ErrorMessage";
 import {Button} from "@/components/ui/button";
 import {Textarea} from "@/components/ui/textarea";
 import {cn} from "@/lib/utils";
 import {Label} from "@radix-ui/react-label";
-import {TabsContent} from "@radix-ui/react-tabs";
 import {TrashIcon, Plus} from "lucide-react";
-import {register} from "module";
 import {Input} from "@/components/ui/input";
 import {
   FieldErrors,
@@ -14,6 +14,7 @@ import {
   UseFormRegister,
 } from "react-hook-form";
 import {ItineraryType} from "@/components/addNewItineraryDay/ItineraryDayForm";
+import { TabsContent } from "../ui/tabs";
 
 type TabContentProps = {
   tabName: "morning" | "afternoon" | "evening";

@@ -1,3 +1,5 @@
+"use client";
+
 import {Doc} from "@/convex/_generated/dataModel";
 import navigationSvg from "@/public/card-navigation.svg";
 import {Card, CardContent, CardDescription, CardTitle} from "@/components/ui/card";

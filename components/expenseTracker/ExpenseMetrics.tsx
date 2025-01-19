@@ -1,4 +1,5 @@
 "use client";
+
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {Doc} from "@/convex/_generated/dataModel";
 import {DollarSignIcon} from "lucide-react";

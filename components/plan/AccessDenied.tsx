@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 
 function AccessDenied() {
@@ -57,14 +59,23 @@ function AccessDenied() {
           <circle cx="433.63626" cy="105.17383" r="12.18187" fill="#fff" />
         </svg>
         <div className="flex flex-col gap-3 max-w-[80%]">
-          <h1 className="xl:text-3xl lg:text-2xl md:text-xl text-lg">Access Denied or Not Found</h1>
-          <p>The Plan you are trying to access either does not belong to you or does not exist.</p>
+          <h1 className="xl:text-3xl lg:text-2xl md:text-xl text-lg">
+            Access Denied or Not Found
+          </h1>
+          <p>
+            The Plan you are trying to access either does not belong to you or
+            does not exist.
+          </p>
           <div className="text-md text-muted-foreground max-w-[90%]">
             Return to your{" "}
-            <Link href="/dashboard" className="text-[#6D5FFD] hover:underline hover:text-black">
+            <Link
+              href="/dashboard"
+              className="text-[#6D5FFD] hover:underline hover:text-black"
+            >
               Dashboard
             </Link>{" "}
-            or use the navigation switcher at the top to view your existing travel plans.
+            or use the navigation switcher at the top to view your existing
+            travel plans.
           </div>
         </div>
       </div>

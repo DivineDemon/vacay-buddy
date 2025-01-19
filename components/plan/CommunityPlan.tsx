@@ -1,3 +1,5 @@
+"use client";
+
 import {
   AboutThePlace,
   BestTimeToVisit,
@@ -9,15 +11,15 @@ import {
   PackingChecklist,
 } from "@/components/sections";
 
-import {fetchQuery} from "convex/nextjs";
-import {api} from "@/convex/_generated/api";
-import {Id} from "@/convex/_generated/dataModel";
+import { fetchQuery } from "convex/nextjs";
+import { api } from "@/convex/_generated/api";
+import { Id } from "@/convex/_generated/dataModel";
 
 type PlanProps = {
   planId: string;
 };
 
-export default async function CommunityPlan({planId}: PlanProps) {
+export default async function CommunityPlan({ planId }: PlanProps) {
   try {
     const plan = await fetchQuery(api.plan.getSinglePlan, {
       id: planId as Id<"plan">,

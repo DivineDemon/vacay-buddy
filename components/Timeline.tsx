@@ -1,7 +1,9 @@
+"use client";
+
 import ItineraryDayHeader from "@/components/ItineraryDayHeader";
-import {Doc} from "@/convex/_generated/dataModel";
-import {Sun, Sunrise, Sunset, TrashIcon} from "lucide-react";
-import {ReactNode} from "react";
+import { Doc } from "@/convex/_generated/dataModel";
+import { Sun, Sunrise, Sunset, TrashIcon } from "lucide-react";
+import { ReactNode } from "react";
 
 type TimelineProps = {
   itinerary: Doc<"plan">["itinerary"] | undefined;
@@ -9,7 +11,7 @@ type TimelineProps = {
   allowEdit: boolean;
 };
 
-const Timeline = ({itinerary, planId, allowEdit}: TimelineProps) => {
+const Timeline = ({ itinerary, planId, allowEdit }: TimelineProps) => {
   if (itinerary && itinerary.length === 0)
     return (
       <div className="flex justify-center items-center p-4">
@@ -39,7 +41,11 @@ const Timeline = ({itinerary, planId, allowEdit}: TimelineProps) => {
               <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
             </svg>
           </span>
-          <ItineraryDayHeader planId={planId} title={day.title} allowEdit={allowEdit} />
+          <ItineraryDayHeader
+            planId={planId}
+            title={day.title}
+            allowEdit={allowEdit}
+          />
           <div className="flex flex-col gap-5">
             <Activity
               activity={day.activities.morning}
@@ -54,7 +60,9 @@ const Timeline = ({itinerary, planId, allowEdit}: TimelineProps) => {
             <Activity
               activity={day.activities.evening}
               heading="Evening"
-              icon={<Sunset className="w-4 h-4 text-gray-600 dark:text-white" />}
+              icon={
+                <Sunset className="w-4 h-4 text-gray-600 dark:text-white" />
+              }
             />
           </div>
         </li>
@@ -68,7 +76,7 @@ const Activity = ({
   heading,
   icon,
 }: {
-  activity: {itineraryItem: string; briefDescription: string}[];
+  activity: { itineraryItem: string; briefDescription: string }[];
   heading: string;
   icon: ReactNode;
 }) => {
@@ -87,7 +95,9 @@ const Activity = ({
         {activity.map((act, index) => (
           <li key={index}>
             <div className="w-full p-1 overflow-hidden">
-              <span className=" text-foreground font-semibold">{act.itineraryItem}</span>
+              <span className=" text-foreground font-semibold">
+                {act.itineraryItem}
+              </span>
               <p className="max-w-md md:max-w-full text-wrap whitespace-pre-line">
                 {act.briefDescription}
               </p>

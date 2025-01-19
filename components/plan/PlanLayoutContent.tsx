@@ -1,4 +1,5 @@
 "use client";
+
 import PlanContextProvider from "@/contexts/PlanContextProvider";
 import Sidebar from "@/components/plan/Sidebar";
 import {ReactNode} from "react";

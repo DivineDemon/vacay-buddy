@@ -1,6 +1,8 @@
-import {Button} from "@/components/ui/button";
-import {PencilIcon, PlusIcon} from "lucide-react";
-import {ReactNode} from "react";
+"use client";
+
+import { Button } from "@/components/ui/button";
+import { PencilIcon, PlusIcon } from "lucide-react";
+import { ReactNode } from "react";
 
 type Props = {
   icon: ReactNode;
@@ -34,7 +36,11 @@ const HeaderWithEditIcon = ({
           className="rounded-full"
           onClick={handleToggleEditMode}
         >
-          {!hasData ? <PlusIcon className="h-4 w-4" /> : <PencilIcon className="h-4 w-4" />}
+          {!hasData ? (
+            <PlusIcon className="h-4 w-4" />
+          ) : (
+            <PencilIcon className="h-4 w-4" />
+          )}
         </Button>
       )}
     </div>

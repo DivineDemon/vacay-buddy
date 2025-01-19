@@ -1,4 +1,5 @@
 "use client";
+
 import {Doc} from "@/convex/_generated/dataModel";
 import {colors, MAPS_DARK_MODE_STYLES} from "@/lib/constants";
 import {GoogleMap, useJsApiLoader, OverlayView, Libraries} from "@react-google-maps/api";

@@ -1,3 +1,5 @@
+"use client";
+
 import {SelectItem} from "@/components/ui/select";
 import {UserIcon} from "lucide-react";
 import {useQuery} from "convex/react";

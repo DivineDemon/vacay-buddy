@@ -1,3 +1,5 @@
+"use client";
+
 import {Dispatch, SetStateAction} from "react";
 import {z} from "zod";
 import {useMutation} from "convex/react";
@@ -24,6 +26,7 @@ type ItineraryDayFormProps = {
 
 const ItineraryDayForm = ({planId, setOpen}: ItineraryDayFormProps) => {
   const {
+    /* @ts-ignore */
     register,
     handleSubmit,
     handleTabChange,
