@@ -43,20 +43,34 @@ const Header = () => {
                 {/* <Loading /> */}
                 <div className="flex gap-3 items-center">
                   <h4 className="text-sm">John Doe</h4>
-                  <Image src='/profile.svg' quality={100} width={40} height={40} alt="profile image" priority />
+                  <Image
+                    src="/profile.svg"
+                    quality={100}
+                    width={40}
+                    height={40}
+                    alt="profile image"
+                    priority
+                  />
                 </div>
               </AuthLoading>
               <Unauthenticated>
                 {/* <ThemeDropdown />
-                <Link href='/login'>
+                <Link href="/sign-in">
                   <button className="text-sm">Log In</button>
                 </Link>
-                <Link href='/signup'>
+                <Link href='/sign-up'>
                   <button className="bg-[#6D5FFD] text-white px-4 py-2 text-sm rounded-full hover:bg-black transition-all">Sign Up </button>
                 </Link> */}
                 <div className="flex gap-3 items-center">
                   <h4 className="text-sm">John Doe</h4>
-                  <Image src='/profile.svg' quality={100} width={40} height={40} alt="profile image" priority />
+                  <Image
+                    src="/profile.svg"
+                    quality={100}
+                    width={40}
+                    height={40}
+                    alt="profile image"
+                    priority
+                  />
                 </div>
               </Unauthenticated>
               <Authenticated>

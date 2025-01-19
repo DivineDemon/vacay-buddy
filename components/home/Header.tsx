@@ -45,11 +45,13 @@ const Header = () => {
                 <div className="bg-[#6D5FFD] text-white px-4 py-2 rounded-full hover:bg-black transition-all">
                   <SignUpButton mode="modal" afterSignInUrl="/dashboard" />
                 </div> */}
-                <Link href='/login'>
+                <Link href="/sign-in">
                   <button className="text-sm">Log In</button>
                 </Link>
-                <Link href='/signup'>
-                  <button className="bg-[#6D5FFD] text-white px-4 py-2 text-sm rounded-full hover:bg-black transition-all">Sign Up </button>
+                <Link href="/sign-up">
+                  <button className="bg-[#6D5FFD] text-white px-4 py-2 text-sm rounded-full hover:bg-black transition-all">
+                    Sign Up{" "}
+                  </button>
                 </Link>
               </Unauthenticated>
               <Authenticated>

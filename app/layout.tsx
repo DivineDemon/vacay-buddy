@@ -9,10 +9,9 @@ import {Toaster} from "@/components/ui/toaster";
 
 import "./globals.css";
 
-// const inter = Poppins({ weight: "400", subsets: ["latin"] });
 const inter = Poppins({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'], // Specify all weights you need
+  weight: ['400', '500', '600', '700', '800'],
 });
 
 export const metadata: Metadata = {
