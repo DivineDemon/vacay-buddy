@@ -1,9 +1,5 @@
 import Collaborator from "@/components/settings/Collaborator";
 
-interface PageProps {
-  planId: string;
-}
-
-export default function Collaborate({ planId }: PageProps) {
+export default function Collaborate() {
   return <Collaborator />;
 }
