@@ -1,14 +1,14 @@
 import Plan from "@/components/plan/Plan";
 
-export default async function PlanPage({
-  params,
-  searchParams,
-}: {
-  params: {planId: string};
-  searchParams?: {isNewPlan: string};
-}) 
-{
-  const isNewPlan =
-    searchParams && searchParams.isNewPlan ? Boolean(searchParams.isNewPlan) : false;
-  return <Plan planId={params.planId} isNewPlan={isNewPlan} isPublic={false} />;
+interface PageProps {
+  params: Promise<{ planId: string }>;
+  searchParams: { [key: string]: string | string[] | undefined };
+}
+
+export default async function PlanPage(props: PageProps) {
+  const { searchParams } = props;
+  const { planId } = await props.params;
+  const isNewPlan = searchParams && searchParams.isNewPlan ? Boolean(searchParams.isNewPlan) : false;
+  
+  return <Plan planId={planId} isNewPlan={isNewPlan} isPublic={false} />;
 }
