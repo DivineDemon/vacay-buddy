@@ -7,14 +7,22 @@ import {useMutation, useQuery} from "convex/react";
 import {ConvexError} from "convex/values";
 import Image from "next/image";
 import {useRouter, useSearchParams} from "next/navigation";
-import {useEffect} from "react";
+import {Suspense, useEffect} from "react";
 import joinNow from "@/public/join-now.svg";
 
-const Join = () => {
-  const {isLoaded, isSignedIn, user} = useUser();
-  const router = useRouter();
+function Se() {
   const searchParams = useSearchParams();
-  const token = searchParams.get("token");
+
+  return (
+    <Suspense>
+      <Join token={searchParams.get("token")} />
+    </Suspense>
+  )
+}
+
+const Join = ({ token }: { token: string | null }) => {
+  const {isLoaded, isSignedIn} = useUser();
+  const router = useRouter();
 
   const grantAccessByToken = useMutation(api.token.grantAccessByToken);
   const {toast} = useToast();
@@ -55,6 +63,7 @@ const Join = () => {
 
     callGrantAcess();
   }, [isLoaded, isSignedIn, token, currentUser]);
+
   return (
     <div className="w-full h-full flex flex-1 justify-center items-center">
       <div className="flex flex-col justify-center items-center gap-5 bg-muted rounded-full p-10 shadow-">
